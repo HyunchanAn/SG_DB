@@ -1,2 +1,6 @@
 raw_data/
 *.db
+postgres_data/
+
+# Security Rules Auto-Appended
+.env
