@@ -95,3 +95,6 @@ erDiagram
 
 - `SG_proj_004`를 Docker로 실행할 경우, `docker-compose.yml`에서 이 `SG_DB` 디렉토리를 볼륨 마운트(Volume Mount)하여 접근합니다.
 - 로컬 개발 시에는 환경 변수 `DATABASE_URL`을 통해 이 저장소의 `.db` 파일을 바라보도록 설정됩니다.
+
+---
+*Last Updated: 2026-07-19 (Hybrid Environment & MSA Integration)*
