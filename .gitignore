@@ -4,3 +4,7 @@ postgres_data/
 
 # Security Rules Auto-Appended
 .env
+__pycache__/
+*.log
+.coverage
+.pytest_cache/
