@@ -25,13 +25,19 @@ erDiagram
     RAW_MATERIAL ||--o{ FTIR_SPECTRUM : "물질 분광 데이터"
     ADHEREND_PROPERTY ||--o{ ADHEREND_STOCK : "입고 재고 내역"
 
-    %% 마스터: 상용 제품
+    %% 마스터: 상용 제품 및 원본 배합 (추가)
     OUR_PRODUCT {
         int id PK "제품 고유 ID"
         string product_name "제품명 (ex: SGV218ME)"
         string category "구분"
         float thickness_um "두께 (um)"
         string adhesion "점착력"
+    }
+    
+    ADHESIVE_RECIPES {
+        int id PK "배합 고유 ID"
+        string record_date "기록 일자"
+        json formula_data "모노머, 첨가제 및 목표 물성 JSON"
     }
 
     %% 마스터: 원재료
@@ -113,4 +119,4 @@ erDiagram
 - 로컬 개발 시에는 환경 변수 `DATABASE_URL`을 통해 이 저장소의 `.db` 파일을 바라보도록 설정됩니다.
 
 ---
-*Last Updated: 2026-07-19 (Hybrid Environment & MSA Integration)*
+*Last Updated: 2026-07-24 (Hybrid Environment & MSA Integration)*
