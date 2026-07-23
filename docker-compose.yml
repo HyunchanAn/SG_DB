@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  dev_db:
+    image: postgres:15
+    container_name: sg_dev_db
+    environment:
+      POSTGRES_USER: sg_user
+      POSTGRES_PASSWORD: sg_password
+      POSTGRES_DB: sg_proj_004_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init_scripts:/docker-entrypoint-initdb.d
+      - ./pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
